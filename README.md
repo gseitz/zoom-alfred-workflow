@@ -14,7 +14,8 @@ Download and install the workflow (either from source or from the releases page 
 ### Client Credentials
 1. Create a new project in the [Google Developer Console](https://console.developers.google.com/apis/credentials)
 1. Create new *OAuth Client ID* credentials for the project with application type *Other*.
-    ![New OAuth Credentials](images/create_credentials.png) ![Application Type](images/application_type.png)
+    ![New OAuth Credentials](images/create_credentials.png) 
+    ![Application Type](images/application_type.png)
 1. Download Credentials
     ![Download](images/download_credentials.png)
 1. Copy credentials file to `~/.zoom-alfred-workflow/client_secret.json`

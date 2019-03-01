@@ -3,3 +3,4 @@
 .idea
 *.iml
 dist
+.DS_Store
