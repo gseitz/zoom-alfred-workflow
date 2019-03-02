@@ -36,8 +36,7 @@ Download and install the workflow (either from source or from the releases page 
 1. Invoke the workflow again and action the second entry `2. Enter Verification Code`: ![Enter Verification Code](images/enter_code.png)
 1. Paste the verification code in the Alfred prompt after `zm code `: ![Paste Code](images/paste_code.png)
 1. The final OAuth tokens will be saved at `~/.zoom-alfred-workflow/tokens`: ![Tokens saved](images/tokens_saved.png)
-
-Contratulations. Enjoy your meetings without closing annoying browser pages!
+1. Contratulations. You can now join your meetings without having to close annoying redirect-pages in the browser!
 ![Screenshot](images/screenshot.png)
 
 ## How to build
@@ -45,7 +44,9 @@ Contratulations. Enjoy your meetings without closing annoying browser pages!
 ```
 git clone https://github.com/gseitz/zoom-alfred-workflow
 cd zoom-alfred-workflow
-# builds the rust binary, assembles and installs the alfred workflow
-make install 
+# builds the rust binary and assembles the alfred workflow in dist/*.alfredworkflow
+make dist
+# builds the rust binary, assembles the alfred workflow, and automatically installs the workflow
+make install
 ```
 
