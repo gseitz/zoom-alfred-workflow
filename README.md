@@ -3,6 +3,15 @@
 ## TL;DR
 Directly join [**Zoom**](https://www.zoom.us) meetings scheduled in **Google Calendar** via [**Alfred App**](https://www.alfredapp.com) *WITHOUT* having to go through a browser redirect.
 
+![Screenshot](images/screenshot.png)
+
+The workflow lists all meetings in the next 48 hours with a zoom link in a Google Calendar event. The Zoom link is detected in these 3 event fields:
+* the location field,
+* the main calendar event text, or
+* the zoom conferencing entry, created via the Zoom addon for Google Calendar.
+
+Zoom links with a name rather than a zoom room number are currently not supported.
+
 ## What do I need?
 1. Zoom app
 1. Alfred + Powerpack
@@ -14,11 +23,11 @@ Download and install the workflow (either from source or from the releases page 
 ### Client Credentials
 1. Create a new project in the [Google Developer Console](https://console.developers.google.com/apis/credentials)
 1. Create new *OAuth Client ID* credentials for the project with application type *Other*.
-    ![New OAuth Credentials](images/create_credentials.png) 
-    ![Application Type](images/application_type.png)
-1. Download Credentials
+![New OAuth Credentials](images/create_credentials.png)
+![Application Type](images/application_type.png)
+1. Download the credentials file
     ![Download](images/download_credentials.png)
-1. Copy credentials file to `~/.zoom-alfred-workflow/client_secret.json`
+1. Copy the credentials file to `~/.zoom-alfred-workflow/client_secret.json`
 
 
 ### OAuth
