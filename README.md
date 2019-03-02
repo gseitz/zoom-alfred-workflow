@@ -41,7 +41,7 @@ Download and install the workflow (either from source or from the releases page 
 
 ## How to build
 
-```
+```bash
 git clone https://github.com/gseitz/zoom-alfred-workflow
 cd zoom-alfred-workflow
 # builds the rust binary and assembles the alfred workflow in dist/*.alfredworkflow
