@@ -7,8 +7,8 @@ clean:
 build:
 	cargo build --release
 
-dist:
-	mkdir dist
+dist: build
+	mkdir -p dist
 	cp -R workflow dist
 	cp target/release/zoom-alfred-workflow dist/workflow/
 	cd dist/workflow && strip zoom-alfred-workflow
