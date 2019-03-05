@@ -18,7 +18,7 @@ Zoom links with a name rather than a zoom room number are currently not supporte
 1. Google Account
 
 ## Installation and Setup
-Download and install the workflow (either from source or from the releases page on github)
+Download and install the workflow (either [build from source](https://github.com/gseitz/zoom-alfred-workflow#how-to-build) or from the [releases page](https://github.com/gseitz/zoom-alfred-workflow/releases) on github)
 
 ### Client Credentials
 1. Create a new project in the [Google Developer Console](https://console.developers.google.com/apis/credentials)
