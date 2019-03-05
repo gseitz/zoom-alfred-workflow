@@ -214,6 +214,7 @@ fn main_flow(secret: ConsoleApplicationSecret, token_file: &String, search: Stri
         .single_events(true)
         .time_min(now.format("%+").to_string().as_str())
         .time_max(tomorrow_midnight.format("%+").to_string().as_str())
+        .order_by("starttime")
         .doit().unwrap();
 
     let mut items: Vec<alfred::Item> = Vec::new();
