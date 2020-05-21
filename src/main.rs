@@ -118,13 +118,21 @@ fn new_client() -> Client {
 
 fn extract_zoom_link(txt: String) -> Option<String> {
     lazy_static! {
-        static ref RE: Regex = Regex::new(r"(https?://(.*?zoom\.us)/j/([0-9]+))").unwrap();
+        static ref RE: Regex = Regex::new(r"(https?://(.*?zoom\.us)/j/([0-9]+)(?:\?pwd=(\w+))?)").unwrap();
     }
 
-    let n = RE.captures(txt.as_str()).iter().next().map(|c|
-        format!("zoommtg://{}/join?action=join&confno={}", c.get(2).unwrap().as_str(), c.get(3).unwrap().as_str())
-    );
+    let n = RE.captures(txt.as_str()).iter().next().map(|c| {
+        let groups = (c.get(2), c.get(3), c.get(4));
 
+        match groups {
+            (Some(domain), Some(mtg_id), Some(password)) =>
+                format!("zoommtg://{}/join?action=join&confno={}&pwd={}", domain.as_str(), mtg_id.as_str(), password.as_str()),
+            (Some(domain), Some(mtg_id), None) =>
+                format!("zoommtg://{}/join?action=join&confno={}", domain.as_str(), mtg_id.as_str()),
+            _ => format!(""),
+        }
+
+    });
     return n;
 }
 
