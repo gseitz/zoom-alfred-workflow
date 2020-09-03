@@ -22,6 +22,7 @@ Download and install the workflow (either [build from source](https://github.com
 
 ### Client Credentials
 1. Create a new project in the [Google Developer Console](https://console.developers.google.com/apis/credentials)
+1. Add the [Google Calendar API](https://console.developers.google.com/apis/api/calendar-json.googleapis.com) to your project
 1. Create new *OAuth Client ID* credentials for the project with application type *Other*.
 ![New OAuth Credentials](images/create_credentials.png)
 ![Application Type](images/application_type.png)
